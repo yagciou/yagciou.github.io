@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-tw" >
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content="Hugo 0.79.1" />
+    
+    <link rel="canonical" href="https://yagciou.github.io/posts/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8github%E5%89%B5%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84blog/" />
+    <meta name="description" content="私人筆記用">
+    
+
+    <title>使用 hugo 在 GitHub 創建自己的 Blog &middot; Yag Blog</title>
+
+    <link rel="shortcut icon" href="https://yagciou.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://yagciou.github.io/css/main.css" />
+    
+        
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-light.min.css">
+        
+    
+    
+    
+</head>
+
+
+<body class="loading light-mode">
+    
+<div class="top">
+    <img class="logo" src="https://yagciou.github.io/images/logo.svg" alt="logo" />
+</div>
+<div class="bottom">
+    <img class="logo" src="https://yagciou.github.io/images/logo.svg" alt="logo" />
+</div>
+
+    <header class="header">
+    <ul class="menu clearfix control">
+        
+<li class="logo-container logo-light">
+    <a href="https://yagciou.github.io/" class="btn logo-link">
+        <img class="logo" src="https://yagciou.github.io/images/logo_light.svg" alt="logo" />
+    </a>
+</li>
+
+
+<li class="logo-container logo-default">
+    <a href="https://yagciou.github.io/" class="btn logo-link">
+        <img class="logo" src="https://yagciou.github.io/images/logo.svg" alt="logo" />
+    </a>
+</li>
+
+        
+        
+        
+        
+        <li 
+            class="">
+            <a class="btn" id="theme-switcher-button">
+                Article
+            </a>
+            <ul class="sub-menu control">
+                
+                <li class="">
+                    <a href="/posts"
+                    
+                        class="btn "
+                    >主題式</a>
+                </li>
+                
+                <li class="">
+                    <a href="/categories"
+                    
+                        class="btn "
+                    >分類</a>
+                </li>
+                
+                <li class="">
+                    <a href="/tags"
+                    
+                        class="btn "
+                    >標籤</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+        
+        
+        <li 
+            class="">
+            <a class="btn" id="theme-switcher-button">
+                View
+            </a>
+            <ul class="sub-menu control">
+                
+                <li class="">
+                    <a href="#"
+                    
+                        class="btn toggle-sidebar"
+                    >切換側邊欄</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+        
+        
+        <li  id="theme-switcher" 
+            class="">
+            <a class="btn" id="theme-switcher-button">
+                Theme
+            </a>
+            <ul class="sub-menu control">
+                
+                <li class="">
+                    <a href="#"
+                    
+                        
+                        data-theme="light" class="btn"
+                        
+                    >光亮</a>
+                </li>
+                
+                <li class="">
+                    <a href="#"
+                    
+                        
+                        data-theme="dark" class="btn"
+                        
+                    >黑暗</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+    </ul>
+</header>
+
+    <div class="middle">
+        <nav class="sidebar">
+            <ul class="posts control">
+    
+    <li><a class="no-break btn" href='/posts/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8github%E5%89%B5%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84blog/'><i class="icon icon-post"></i>使用 hugo 在 GitHub 創建自己的 Blog</a></li>
+    
+</ul>
+
+        </nav>
+        <main class="main">
+            <article class="article">
+    <h2 class="title"><a href='/posts/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8github%E5%89%B5%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84blog/' class="btn">使用 hugo 在 GitHub 創建自己的 Blog</a></h2>
+    <div class="article-meta clearfix">
+        <ul class="dates clearfix left control">
+            <li><i class="icon icon-date"></i></li>
+            <li class="publish-date">
+                <time datetime="2021.03.18">2021.03.18</time>
+            </li>
+        </ul>
+        
+        <ul class="article-categories clearfix left control">
+            <li><i class="icon icon-categories"></i></li>
+            
+            <li>
+                <a href="https://yagciou.github.io/categories/hugo/" class="btn">Hugo</a>
+            </li>
+            
+        </ul>
+        
+        
+        <div class="article-meta-splitter clearfix"></div>
+        <ul class="article-tags clearfix control">
+            <li><i class="icon icon-tags"></i></li>
+            
+            <li>
+                <a href="https://yagciou.github.io/tags/hugo/" class="btn">hugo</a>
+            </li>
+            
+        </ul>
+        
+    </div>
+    <div class="content">
+        
+        <h3 id="1安裝-homebrew-以mac為例">1.安裝 Homebrew (以Mac為例)</h3>
+<h5 id="目前位置">目前位置：~</h5>
+<p><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</code></p>
+<h3 id="2-安裝-hugo">2. 安裝 Hugo</h3>
+<p><code>brew install hugo</code></p>
+<h3 id="3-創建新網站">3. 創建新網站</h3>
+<p>hugo new site 自己的網站資料夾名稱<br>
+ex：<code>hugo new site yagblog-hugo</code></p>
+<h3 id="4進入剛創建好的資料夾-並-建立-git-數據庫">4.進入剛創建好的資料夾 並 建立 git 數據庫</h3>
+<h5 id="目前位置-1">目前位置：~</h5>
+<p><code>cd yagblog-hugo</code></p>
+<h5 id="目前位置yagblog-hugo">目前位置：~/yagblog-hugo</h5>
+<p><code>git init</code></p>
+<h3 id="5-選擇一個-主題httpsthemesgohugoio-並參考文件新增">5. 選擇一個 <a href="https://themes.gohugo.io/">主題</a> 並參考文件新增</h3>
+<p>這裡使用 fuji<br>
+ex：<code>git submodule add https://github.com/amzrk2/hugo-theme-fuji.git themes/fuji</code><br>
+新增的主題會在 themes/主題名稱資料夾 ( 此處為 themes/fuji )</p>
+<h3 id="6-複製並取代-static-和-layouts-資料夾">6. 複製並取代 static 和 layouts 資料夾</h3>
+<ul>
+<li>先移除 <code>yagblog-hugo</code> 資料夾裡的 static 和 layouts 資料夾
+<pre><code>rm -rf layouts 
+ rm -rf static
+</code></pre></li>
+<li>再把 主題 裡的 static 和 layouts 資料夾複製過來<br>
+<code>cp -R ./themes/fuji/exampleSite/static static</code><br>
+<code>cp -R ./themes/fuji/layouts layouts</code></li>
+</ul>
+<h3 id="7-在-contentposts-建立新文章">7. 在 /content/posts 建立新文章</h3>
+<p>hugo new posts/文章名字.md<br>
+(文章名字可以用中文，但不可有空白否則會中斷)<br>
+<code>hugo new posts/my-first-post.md</code></p>
+<p>進入 /content/posts 資料夾就會看到 my-first-post.md 的 markdown 檔案，<br>
+將 draft (草稿模式)改成 false 才會顯示文章。<br>
+以後建立文章都是用此方式再去做修改。</p>
+<ul>
+<li>產生出的 md 檔案會長這樣子</li>
+</ul>
+<pre><code>---
+title: &quot;my-first-post&quot;
+date: 2021-03-19T12:20:11+08:00
+draft: true
+---
+</code></pre><ul>
+<li>title 可以空白</li>
+<li>詳細屬性請參考下方 &quot;Hugo 支持的常用 Front Matter 屬性&quot;</li>
+<li>可以修改 <code>archetypes/</code> 下的 <code>default.md</code> 預設模板來自製以後新增的初版 md 檔案</li>
+</ul>
+<h3 id="8-複製並取代-configtoml">8. 複製並取代 config.toml</h3>
+<ul>
+<li>先移除 <code>config.toml</code> 檔案<br>
+<code>rm -rf config.toml</code></li>
+<li>再把 主題 裡的 config.toml 檔案複製過來<br>
+<code>cp ./themes/fuji/exampleSite/config.toml config.toml</code></li>
+</ul>
+<h3 id="9-編輯-configtoml">9. 編輯 config.toml</h3>
+<p>修改以下三項，其餘版面設定依自己需求修改<br>
+<a href="https://gohugo.io/getting-started/configuration/">官方配置文件</a></p>
+<pre><code>baseURL = &quot;https://GitHub帳號名稱.github.io/&quot;
+languageCode = &quot;zh-tw&quot;
+title = &quot;Yag Blog&quot;    #網頁名稱，可自由命名
+</code></pre>
+<h3 id="10-本地測試網頁">10. 本地測試網頁</h3>
+<p><code>hugo server -D</code> (包含草稿)<br>
+<code>hugo server</code> (不包含草稿)</p>
+<p>執行完後，在瀏覽器中輸入網址 <code>http://localhost:1313</code>，就可以看到網站。</p>
+<h2 id="部署到-github">部署到 GitHub</h2>
+<h3 id="11-在-github-建立兩個-repository">11. 在 GitHub 建立兩個 repository</h3>
+<p>在 GitHub 建立 yagblog-hugo 和 自己的GitHub帳號名稱.github.io 兩個repo。</p>
+<h3 id="12-建立-public-資料夾">12. 建立 /public 資料夾</h3>
+<h5 id="目前位置yagblog-hugo-1">目前位置：~/yagblog-hugo</h5>
+<p><code>hugo</code></p>
+<h3 id="13-將-public-資料夾連結到-github-上的-yagbloggithubio">13. 將 /public 資料夾連結到 GitHub 上的 yagblog.github.io</h3>
+<h5 id="目前位置yagblog-hugo-2">目前位置：~/yagblog-hugo</h5>
+<p><code>cd public</code></p>
+<h5 id="目前位置yagblog-hugopublic">目前位置：~/yagblog-hugo/public</h5>
+<pre><code>git init
+(git remote add origin 自己的GitHub帳號名稱.github.io 位置)
+git remote add origin https://github.com/yagciou/yagciou.github.io.git 
+git add -A
+git commit -m &quot;Initial commit&quot;
+git push -u origin master
+</code></pre><ul>
+<li>接下來可能會讓你輸入你的 Github 帳號和密碼，之後就可以去 Github 和 http://帳號.github.io 查看是否成功。</li>
+</ul>
+<h3 id="14-將整個-yagblog-hugo-資料夾連結到-github-上的-yagblog-hugo">14. 將整個 yagblog-hugo 資料夾連結到 GitHub 上的 yagblog-hugo</h3>
+<h5 id="目前位置yagblog-hugopublic-1">目前位置：~/yagblog-hugo/public</h5>
+<p><code>cd ../</code></p>
+<h5 id="目前位置yagblog-hugo-3">目前位置：~/yagblog-hugo</h5>
+<pre><code>git init
+(git remote add origin 自己的GitHub上的yagblog-hugo 位置)
+git remote add origin https://github.com/yagciou/yagblog-hugo.git
+git add -A
+git commit -m &quot;Initial commit&quot;
+git push -u origin master
+</code></pre><p>在執行 git add .時出現如下面的 warning 時不用在意</p>
+<p><img src="/images/hugo1.svg" alt="示意圖"></p>
+<p>等個幾分鐘，去瀏覽器輸入網址 <a href="https://yagciou.github.io/">https://yagciou.github.io/</a> 就大功告成囉！</p>
+<h3 id="15-更新-blog-文章">15. 更新 Blog 文章</h3>
+<h5 id="目前位置yagblog-hugo-4">目前位置：~/yagblog-hugo</h5>
+<p>之後添加文章，只需要重新編譯 Hugo，重新提交到 Github 即可。</p>
+<pre><code>hugo
+cd public
+</code></pre><h5 id="目前位置yagblog-hugopublic-2">目前位置：~/yagblog-hugo/public</h5>
+<pre><code>git add -A
+
+建立新 commit 
+git commit -m &quot;本次更新的說明&quot;
+git push -u origin master
+---------------------------------------------
+不想建立新 commit 要使用合併
+git commit --amend
+git push -u origin master -f
+</code></pre><p><code>cd ../</code></p>
+<h5 id="目前位置yagblog-hugo-5">目前位置：~/yagblog-hugo</h5>
+<pre><code>git add -A
+
+建立新 commit 
+git commit -m &quot;本次更新的說明&quot;
+git push -u origin master
+---------------------------------------------
+不想建立新 commit 要使用合併
+git commit --amend
+git push -u origin master -f
+</code></pre><hr>
+<ul>
+<li>
+<p>使用主題<br>
+<a href="https://github.com/dsrkafuu/hugo-theme-fuji/blob/master/README_CN.md">fuji</a><br>
+目前主題：<br>
+<a href="https://github.com/sfengyuan/edidor/blob/main/README-zh.md">edidor</a></p>
+</li>
+<li>
+<p>參考建置方式<br>
+<a href="https://reurl.cc/zbKG76">參考建置方式 1</a><br>
+<a href="https://chupai.github.io/posts/200316_hugo/">參考建置方式 2</a></p>
+</li>
+<li>
+<p>md檔案屬性與寫法<br>
+<a href="https://markdown.tw/">https://markdown.tw/</a></p>
+<ul>
+<li>這是清單</li>
+</ul>
+<ul>
+<li>這也是清單</li>
+</ul>
+<ul>
+<li>這同樣是清單
+<ul>
+<li>清單子項目</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>數字型清單</li>
+<li>第二個數字清單</li>
+<li>數字清單不需要連續數字
+3. 數字清單子項目</li>
+</ol>
+</li>
+</ul>
+<p><strong>我是粗體</strong></p>
+<p><em>我是斜體</em></p>
+<p><em>我也是斜體</em></p>
+<p><del>我被刪除</del></p>
+<p><code>只有一個 ` 可以轉換小段的程式碼</code></p>
+<pre><code>加入tab即可轉換程式區塊
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">	&lt;<span style="color:#f92672">body</span>&gt;
+	  &lt;<span style="color:#f92672">p</span>&gt;這是一段 HTML 結構&lt;/<span style="color:#f92672">p</span>&gt;
+	&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><ul>
+<li>區塊引言</li>
+</ul>
+<blockquote>
+<p>可以在每個段落前方加上&gt;就行</p>
+</blockquote>
+<ul>
+<li>
+<p>Hugo 支持的常用 Front Matter 屬性：<br>
+Front-matter 是 md 檔案最上方的分隔區域，用於指定個別檔案的變數。</p>
+<ul>
+<li>title：標題名，使用 hugo new 建立會與檔名相同。</li>
+<li>date：日期，使用 hugo new 建立為目前時間。</li>
+<li>draft：草稿，如果是 true 生成網站時，不包括此頁面。</li>
+<li>description：內容描述，主要用於 SEO 優化。</li>
+<li>tags：標籤。</li>
+<li>categories：分類。</li>
+<li>keywords：關鍵字。</li>
+<li>url：文章 url 名稱，預設使用檔案名稱。</li>
+<li>weight：列表頁的文章排序，越小越靠前，無設定則依照時間排序。</li>
+</ul>
+</li>
+</ul>
+<h3 id="容易遇到的問題">容易遇到的問題</h3>
+<ul>
+<li>Markdown 圖片路徑<br>
+在 Markdown 圖片路徑中，是以 <code>static/</code> 為根目錄寫全路徑。<br>
+圖片位置：<code>/static/imgae/post1.png</code>，那麼在 Markdown 中寫作：</li>
+</ul>
+<p><code>![圖片說明](/imgae/post1.png)</code></p>
+
+        
+    </div>
+
+</article>
+<section class="comment">
+    <p class="local-info">
+        Comment is disabled to avoid unwanted discussions from 'localhost:1313' on your Disqus
+        account...
+    </p>
+    <div id="disqus_thread"></div>
+</section>
+<script type="text/javascript">
+
+    (function () {
+        if (window.location.hostname == "localhost") {
+            return
+        }
+        document.querySelector('.local-info').classList.add('hide')
+
+        let dsq = document.createElement('script')
+        dsq.type = 'text/javascript'
+        dsq.async = true
+        let disqus_shortname = 'Yag'
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq)
+    })()
+</script>
+
+
+        </main>
+    </div>
+    <footer class="footer clearfix">
+    <ul class="control social clearfix">
+        <li><a class="author btn" href="#">Yag</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li>
+            <a class="icon-link btn" href="https://yagciou.github.io/index.xml" type="application/rss+xml" title="rss">
+                <i class="rss icon"></i></a>
+        </li>
+    </ul>
+
+    <ul class="control status clearfix">
+        <li><a href="#" class="btn">Posts:
+                2</a>
+        </li>
+        <li><a href="#" class="btn">Pages:
+                0</a></li>
+        <li><a href="#" class="btn">en</a></li>
+        <li><a href="https://gohugo.io" class="btn">Hugo: 0.79.1</a></li>
+        <li><a href="https://github.com/sfengyuan/edidor" class="btn">Theme: Edidor</a></li>
+        <li>
+            
+        </li>
+    </ul>
+</footer>
+<div class="dialog">
+    <div class="wrapper">
+        <div class="clearfix"><button class="btn close-dialog">X</button></div>
+        <header>
+            <h1 class="title">Theme Name</h1>
+        </header>
+        <main>
+            <div class="clearfix">
+                <label for="theme-name">
+                    <p>Only English Character, space, hyphen are allowed!</p>
+                    <p>Valid name examples: "custom", "fantastic theme", "my-theme"</p>
+                    <p>Invalid name examles: "我的主题", ":)", "123"</p>
+                </label>
+                <input type="text" name="theme-name" id="theme-name">
+            </div>
+            <div class="clearfix">
+                <button class="btn export">Export</button>
+            </div>
+
+        </main>
+        <footer></footer>
+    </div>
+</div>
+
+    <script src="https://yagciou.github.io/js/main.js"></script>
+
+    <script src="https://yagciou.github.io/js/hightlight.js"></script>
+
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', ' ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
